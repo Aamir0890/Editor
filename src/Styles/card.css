@@ -1,0 +1,122 @@
+.card-slider{
+  justify-content: center;
+  width: 570px;
+   height: 550px;
+   position: relative;
+}
+
+.card-slider-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  padding: 1rem;
+  border-color: black;
+  border-radius: 8px;
+  min-width: 90%;
+  transform: var(--card-transform, translateX(0%));
+}
+
+.card-slider-btn {
+  position: absolute;
+  top: 50%;
+  
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card-slider-dot-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.draggable {
+  touch-action: manipulation; /* Prevent default touch actions */
+}
+
+.add-btn{
+  background-color: #00b8d9;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon{
+  margin-right: 8px;
+}
+@media (max-width: 700px) {
+  .add-btn {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon{
+    margin-right: 0px;
+  }
+ 
+  .text {
+    display: none;
+  }
+
+  .card-slider{
+    justify-content: center;
+    width: 350px;
+     height: 450px;
+     position: relative;
+  }
+  .card-slider-card{
+    min-width: 85%;
+  }
+  .copy-link-container{
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    width: 5%;
+  }
+}
+
+.copy-link-container {
+  border-radius: 1.5rem;
+  border: 1px solid #a6a4a4;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 7%;
+  margin-bottom: 1%;
+  margin-left: 20%;
+}
+
+.copy-link-text {
+  color: rgb(178, 174, 174);
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.copy-link-icon {
+  cursor: pointer;
+  color: grey;
+  font-size: 20px;
+}
+
+.copy-link-icon:hover {
+  color: #007bff; /* Change color on hover */
+}
