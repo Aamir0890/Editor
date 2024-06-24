@@ -32,7 +32,7 @@ const Card: React.FC = () => {
   const [currentEditingId, setCurrentEditingId] = useState<number | null>(null);
   const [linkToCopy] = useState<string>('https://www.groupgreeting.com/sign/d12e60c5ec0db9c');
   const [offsetPercentage, setOffsetPercentage] = useState(106);
-
+// const [originalPosition, setOriginalPosition] = useState({ x: 0, y: 0 });
   const showPrevCard = () => {
     setCardIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
     setIsEditing(false);
@@ -163,6 +163,7 @@ const Card: React.FC = () => {
   
   const saveTextEditor = () => {
     setIsEditing(false);
+    
   };
 
   return (
@@ -233,13 +234,15 @@ const Card: React.FC = () => {
                     fontSize: '16px',
                     color: 'black',
                     fontFamily: 'Arial, sans-serif',
-                    zIndex: 5,
+                    zIndex: 6, // Set the z-index higher
                     border: currentEditingId === item.id && !isEditing ? '1px dashed #ccc' : 'none',
                     padding: '5px',
                     minHeight: '20px',
                     backgroundColor: currentEditingId === item.id ? 'lightyellow' : 'transparent',
                     cursor: 'pointer',
-                    position: 'relative'
+                    position: 'relative',
+                    maxWidth: '100%', // Ensure it doesn't overflow the screen
+                    boxSizing: 'border-box'
                   }}
                   onClick={() => handleTextClick(item.id)}
                   onTouchEnd={() => handleTextClick(item.id)}

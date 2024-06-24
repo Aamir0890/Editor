@@ -13,7 +13,7 @@ function Header() {
       </h3>
       <h3 className="card-timer">
         <FontAwesomeIcon icon={faHourglass2} className="timer-icon" />
-        12 days 17 hrs 54 minutes 14 seconds
+        12 days 17 hrs 54 minutes 14 seconds!!
       </h3>
     </div>
   </div>
